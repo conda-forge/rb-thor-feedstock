@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: generic
-  number: 0
+  number: 1
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
@@ -40,3 +40,5 @@ extra:
   recipe-maintainers:
     - sodre
     - Tata17
+    - oblute
+    - rluria14
