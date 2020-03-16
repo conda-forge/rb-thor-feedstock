@@ -13,13 +13,16 @@ build:
   number: 1
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem --
-      --use-system-libraries  # [rb25]
+      --use-system-libraries  # [osx and rb25]
       {% for dir in [ '', 'ext/generator', 'ext/parser' ] %}
       - make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext/{{ name }}/{{ dir }} clean
       {% endfor%}
+
   skip: {{ win }}
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - ruby
   run:
@@ -33,7 +36,7 @@ about:
   home: https://rubygems.org/gems/{{ name }}
   license: MIT
   license_family: MIT
-  license_file: {{ name }}-{{ version }}/LICENSE.md
+  license_file: LICENSE
   summary: Simple and efficient tool for building self-documenting command line utilities
   doc_url: https://www.rubydoc.info/gems/{{ name }}
   dev_url: https://github.com/erikhuda/{{ name }}
