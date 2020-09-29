@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: generic
-  number: 0
+  number: 1
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
@@ -25,13 +25,13 @@ requirements:
 
 test:
   commands:
-    - ruby -r {{ name }} -e 'exit 0'
+    - ruby -r zip -e 'exit 0'
 
 about:
   home: https://rubygems.org/gems/{{ name }}
   license: MIT
   license_family: MIT
-  license_file: {{ name }}-{{ version }}/LICENSE.md
+  license_file: LICENSE.txt
   summary: Simple and efficient tool for building self-documenting command line utilities
   doc_url: https://www.rubydoc.info/gems/{{ name }}
   dev_url: https://github.com/erikhuda/{{ name }}
@@ -40,3 +40,5 @@ extra:
   recipe-maintainers:
     - sodre
     - Tata17
+    - oblute
+    - rluria14
