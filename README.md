@@ -5,11 +5,13 @@ Home: https://rubygems.org/gems/thor
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rb-thor-feedstock/blob/master/LICENSE.txt)
 
 Summary: Simple and efficient tool for building self-documenting command line utilities
 
+Development: https://github.com/erikhuda/thor
 
+Documentation: https://www.rubydoc.info/gems/thor
 
 Current build status
 ====================
