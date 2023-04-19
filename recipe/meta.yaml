@@ -11,17 +11,16 @@ source:
 
 build:
   noarch: generic
-  number: 0
+  number: 1
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
-  skip: {{ win }}
 
 requirements:
   host:
-    - ruby
+    - ruby >=2.7,<3
   run:
-    - ruby
+    - ruby >=2.7,<3
 
 test:
   commands:
@@ -40,3 +39,5 @@ extra:
   recipe-maintainers:
     - sodre
     - Tata17
+    - svengiegerich
+    - janjagusch
