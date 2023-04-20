@@ -1,5 +1,5 @@
 {% set name = "thor" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 06e1a090166cf717792da5e22e4bac9d2a692c9f4a6d5d84c45101291c937930
+  sha256: b1752153dc9c6b8d3fcaa665e9e1a00a3e73f28da5e238b81c404502e539d446
 
 build:
   noarch: generic
